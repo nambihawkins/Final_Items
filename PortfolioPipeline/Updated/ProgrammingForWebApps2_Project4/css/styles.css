@@ -1,8 +1,12 @@
 body{
     font: 62.5% "Trebuchet MS", sans-serif;
     margin: 50px;
+    background: url('../images/groceries.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-#add-todo{
+#add-item{
     position: absolute;
 }
 form p {
@@ -17,22 +21,22 @@ ul{
     padding-left:1.4em;
     list-style: none;
 }
-#todo-list, #completed-list {
+#items-list, #completed-list {
     margin: 0.5em 0 0 0 ;
     padding: 0.2em 0 0 0;
     list-style-type: none ;
     font-size: 1.5em;
 }
-#todo-list li, #completed-list li {
+#items-list li, #completed-list li {
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding-top:0.1em ;
     line-height: 170%;
     margin-top:0.2em;
 }
-#todo-list .due-date, #completed-list .due-date {
+#items-list .quantity, #completed-list .quantity {
     display: inline-block;
 }
-#todo-list .task, #completed-list .task {
+#items-list .item, #completed-list .item {
     width: 60%;
     display: inline-block;
 }
@@ -58,7 +62,7 @@ ul{
     background-color: red;
     color: white;
 }
-#todo-list .done:hover{
+#items-list .done:hover{
     background-color: green;
     color: white;
 }

@@ -8,26 +8,25 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-<H1>Nambi Hawkins <br> Project 4 </H1>
+<H1>Your Grocery List</H1>
 
 <div class="container">
-    <button id="add-todo">What to do next...</button>
+    <button id="add-item">Click Here to Add to Your Grocery List...</button>
 <!-- Modal -->
-    <div id="to-do">
-        <h1>My To-Do List</h1>
-        <ul id="todo-list" class="sortlist">
+    <div id="groceries">
+        <ul id="items-list" class="sortlist">
         </ul>
     </div>
 
-    <div id="new-todo" title="add to-do item">
+    <div id="new-item" title="Add Grocery Item">
         <form>
             <p>
-                <label for="task">Task Name:</label>
-                <input type="text" name="task" id="task">
+                <label for="item">Grocery Item:</label>
+                <input type="text" name="item" id="item">
             </p>
             <p>
-                <label for="due-date">Due Date:</label>
-                <input type="text" name="due-date" id="due-date">
+                <label for="quantity">Quantity:</label>
+                <input type="text" name="quantity" id="quantity">
             </p>
         </form>
     </div>
@@ -35,7 +34,7 @@
 <script>
     if (typeof(Storage) !== "undefined") {
         // Store
-        localStorage.setItem(".container", "#todo-list");
+        localStorage.setItem(".container", "#items-list");
         // Retrieve
         document.getElementById("result").innerHTML = localStorage.getItem("container");
     } else {
