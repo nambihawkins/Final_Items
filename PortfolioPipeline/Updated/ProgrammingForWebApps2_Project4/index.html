@@ -2,57 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Activity 4</title>
+    <title>Grocery List</title>
     <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-<H1>Your Grocery List</H1>
+  <h1>Your Grocery List</h1>
 
-<div class="container">
-    <button id="add-item">Click Here to Add to Your Grocery List...</button>
-<!-- Modal -->
-    <div id="groceries">
-        <ul id="items-list" class="sortlist">
-        </ul>
-    </div>
+  <div class="container">
 
-    <div id="new-item" title="Add Grocery Item">
-        <form>
-            <p>
-                <label for="item">Grocery Item:</label>
-                <input type="text" name="item" id="item">
-            </p>
-            <p>
-                <label for="quantity">Quantity:</label>
-                <input type="text" name="quantity" id="quantity">
-            </p>
-        </form>
-    </div>
+      <button id="add-item">Click Here to Add to Your Grocery List...</button>
+  <!-- Modal -->
+      <div>
 
-<script>
-    if (typeof(Storage) !== "undefined") {
-        // Store
-        localStorage.setItem(".container", "#items-list");
-        // Retrieve
-        document.getElementById("result").innerHTML = localStorage.getItem("container");
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-    }
-</script>
+          <div id="groceries">
+              <h1 class=spacer>  <br> <br>  </h1>
+              <ul id="items-list" class="sortlist">
+              </ul>
+          </div>
+
+          <div id="new-item" title="Add Grocery Item">
+              <form>
+                  <p>
+                      <label for="item">Grocery Item:</label>
+                      <input type="text" name="item" id="item">
+                  </p>
+                  <p>
+                      <label for="quantity">Quantity:</label>
+                      <input type="text" name="quantity" id="quantity">
+                  </p>
+              </form>
+          </div>
+
+          <script>
+              if (typeof(Storage) !== "undefined") {
+                  // Store
+                  localStorage.setItem(".container", "#items-list");
+                  // Retrieve
+                  document.getElementById("result").innerHTML = localStorage.getItem("container");
+              } else {
+                  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+              }
+          </script>
+
+  </div>
 
 
 
-</div>
 
 
-
-
-
-<script src="js/jquery.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/script.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/script.js"></script>
 
 
 
