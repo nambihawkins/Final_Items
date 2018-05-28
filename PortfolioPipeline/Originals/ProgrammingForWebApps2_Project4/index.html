@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity 4</title>
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<H1>Nambi Hawkins <br> Project 4 </H1>
+
+<div class="container">
+    <button id="add-todo">What to do next...</button>
+<!-- Modal -->
+    <div id="to-do">
+        <h1>My To-Do List</h1>
+        <ul id="todo-list" class="sortlist">
+        </ul>
+    </div>
+
+    <div id="new-todo" title="add to-do item">
+        <form>
+            <p>
+                <label for="task">Task Name:</label>
+                <input type="text" name="task" id="task">
+            </p>
+            <p>
+                <label for="due-date">Due Date:</label>
+                <input type="text" name="due-date" id="due-date">
+            </p>
+        </form>
+    </div>
+
+<script>
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem(".container", "#todo-list");
+        // Retrieve
+        document.getElementById("result").innerHTML = localStorage.getItem("container");
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+</script>
+
+
+
+</div>
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+
+
+
+
+
+</body>
+</html>
