@@ -1,0 +1,102 @@
+body{
+    font: 80% "Trebuchet MS", sans-serif;
+    margin: 50px;
+    background: url('../images/groceries.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#add-item{
+    position: absolute;
+    background: #c9c9c9;
+    background-image: -webkit-linear-gradient(top, #c9c9c9, #000000);
+    background-image: -moz-linear-gradient(top, #c9c9c9, #000000);
+    background-image: -ms-linear-gradient(top, #c9c9c9, #000000);
+    background-image: -o-linear-gradient(top, #c9c9c9, #000000);
+    background-image: linear-gradient(to bottom, #c9c9c9, #000000);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px #666666;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+#add-item:hover {
+    background: #000000;
+    background-image: -webkit-linear-gradient(top, #000000, #c9c9c9);
+    background-image: -moz-linear-gradient(top, #000000, #c9c9c9);
+    background-image: -ms-linear-gradient(top, #000000, #c9c9c9);
+    background-image: -o-linear-gradient(top, #000000, #c9c9c9);
+    background-image: linear-gradient(to bottom, #000000, #c9c9c9);
+    text-decoration: none;
+}
+form p {
+    line-height: 1em;
+}
+label {
+    width: 25%;
+    float: left;
+    display: inline-block;
+}
+ul{
+    padding-left:1.4em;
+    list-style: none;
+}
+#items-list, #completed-list {
+    margin: 0.5em 0 0 0 ;
+    padding: 0.2em 0 0 0;
+    list-style-type: none ;
+    font-size: 1em;
+}
+#items-list li, #completed-list li {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top:0.1em ;
+    line-height: 170%;
+    margin-top:0.2em;
+}
+#items-list .quantity, #completed-list .quantity {
+    display: inline-block;
+}
+#items-list .item, #completed-list .item {
+    width: 60%;
+    display: inline-block;
+}
+.delete, .done {
+    display: inline-block;
+    margin: .025em 0.2em;
+    cursor: pointer;
+    border-radius: 0.2em;
+    line-height: 130%;
+    width: 1.2em;
+    height: 1.2em;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.done {
+    float: left;
+    margin-right: 1em;
+}
+.delete {
+    float: right;
+}
+.delete:hover {
+    background-color: red;
+    color: white;
+}
+#items-list .done:hover{
+    background-color: green;
+    color: white;
+}
+#completed-list .done {
+    color: green;
+    border: none;
+    cursor: default;
+
+}
